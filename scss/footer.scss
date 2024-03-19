@@ -1,0 +1,135 @@
+@use 'variables';
+@use 'mixins';
+
+footer-component{
+    width: 100%;
+    
+        footer{
+            width: 100% !important;
+            min-height: 300px;
+            background-color: #1d1d1d;
+            color: white;
+            font-family: variables.$fontFamilyDefault;
+    
+            .containerFooter{
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 40px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+    
+                .calcInfo{
+                    max-width: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    h2{
+                        font: 20px;
+                        text-transform: lowercase;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                    &Copy{
+                        font-size: 12px !important;
+                        padding-top: 10px;
+                    }
+                }
+
+                .moreContent{
+                    display: flex;
+                    justify-content: space-around;
+                    max-width: 400px;
+                    gap: 100px;
+
+                    //EFEITO AFTER
+                    .moreProjects{
+                        ul{
+                            a{
+                                &:hover{
+                                    ::after{
+                                        width: 100%;
+                                    }
+                                }
+                                    
+                                ::after{
+                                    content: "";
+                                    width: 0;
+                                    height: 1px;
+                                    background-color: variables.$primaryColor;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    transition: .3s;
+                                }
+                            }
+                        }
+                    }
+
+                    .moreProjects, .socialMedias{
+                        h3{
+                            text-transform: uppercase;
+                            font-size: 18px;
+                        }
+                        ul{
+                            padding-top: 10px;
+                            list-style-type: none;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                            align-items: start;
+                                
+                            a{
+                                text-decoration: none;
+                                color: white;
+                                font-size: 14px;
+                                transition: .3s;
+                                position: relative;
+                                width: auto;
+                                
+                                &:hover{
+                                    color: variables.$primaryColor;
+                                    transition: .3s;
+                                }
+                                
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+//RESPONSIVO
+
+@media (max-width: 950px){
+    .containerFooter{
+        padding: 20px !important;
+        gap: 20px;
+    }
+
+    .calcInfo{
+        p{
+            font-size: 12px !important;
+        }
+    }
+
+    .moreProjects, .socialMedias{
+        h3{
+            font-size: 14px !important;
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .containerFooter{
+        flex-direction: column !important;
+    }
+    .moreContent{
+        gap: 40px !important ;
+    }
+}

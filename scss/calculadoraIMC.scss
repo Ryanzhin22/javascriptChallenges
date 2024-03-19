@@ -1,0 +1,159 @@
+@use 'variables';
+@use 'mixins';
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.disappear{
+    display: none !important;
+}
+
+.calculadoraIMC{
+    @include mixins.btnBack;
+    @include mixins.flex-center;
+    background-color: variables.$primaryColor;
+    min-height: 100vh;
+    width: 100%;
+
+    .calculadoraDisplay{
+        @include mixins.flex-center;
+        flex-direction: column;
+        justify-content: start;
+        width: 500px;
+        height: 500px;
+        background-color: #1F1E33;
+        border-radius: 5px;
+        
+        h2{
+            color: #fff;
+            font-size: 32px;
+            padding: 40px 0;
+
+        }
+
+        &Input{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            padding-bottom: 20px;
+
+            input{
+                padding: 15px 10px;
+            }
+
+            label{
+                color: white;
+                padding-bottom: 5px;
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+
+        &Buttons{
+            padding-top: 30px;
+            display: flex;
+            gap: 20px;
+
+            button{
+                width: 190px;
+                height: 50px;
+                color: white;
+                text-transform: uppercase;
+                font-size: 16px;
+                background-color: #37383C;
+                border: none;
+                cursor: pointer;
+                transition: .3s;
+                
+                &:hover{
+                    background-color: #272525; 
+                    transition: .3s ;
+                }
+            }
+
+            .calc{
+                background-color: #D23631;
+                transition: .3s;
+
+                &:hover{
+                    background-color: #b6312c;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+
+    .ratingsDisplay{
+        @include mixins.flex-center;
+        flex-direction: column;
+        justify-content: start;
+        width: 500px;
+        height: 550px;
+        background-color: #1F1E33;
+        border-radius: 5px;
+        color: white;
+
+        span{
+            color: variables.$primaryColor;
+        }
+
+        h2{
+            padding-top: 40px;
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        h3{
+            font-size: 26px;
+            font-weight: 300;
+            padding: 10px 0px;
+        }
+
+        h4{
+            padding-bottom: 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .table{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0px 20px;
+
+            
+            .tableHead, .tableRating{
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 0px;
+                border-bottom: 1px solid #444;
+            }
+
+            .tableHead p, .tableRating p{
+                flex: 1;
+                text-align: center;
+            }
+        }
+
+        button{
+            width: 140px;
+            height: 50px;
+            margin-top: 20px;
+            border: none;
+            background-color: #D23631;
+            color: white;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: .3s;
+
+            &:hover{
+                background-color: #b6312c;
+                transition: .3s;
+            }
+        }
+    }
+}

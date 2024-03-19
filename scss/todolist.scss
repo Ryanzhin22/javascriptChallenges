@@ -1,0 +1,192 @@
+@use 'variables';
+@use 'mixins';
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.todolist{
+    @include mixins.flex-center;
+    @include mixins.btnBack;
+    background-color: variables.$primaryColor;
+    min-height: 100vh;
+    padding: 40px;
+
+    .disabled{
+        display: none !important;
+    }
+
+    .displayToDo{
+        @include mixins.flex-center;
+        flex-direction: column;
+        justify-content: start;
+        padding: 40px;
+        width: 700px;
+        min-height: 800px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        h2{
+            font-size: 35px;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+        }
+
+        .inputWrapper{
+            display: flex;
+            
+            input{
+                width: 500px;
+                height: 50px;
+                outline: none;
+                border-radius: 6px 0px 0px 6px;
+                border: 1px solid black;
+                border-right: none;
+                padding: 0px 10px;
+                font-size: 16px;
+            }
+
+            .addToDo{
+                @include mixins.flex-center;
+                background-color: #5f91ff;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                border-radius: 0px 6px 6px 0px;
+                transition: .3s;
+
+                &:hover{
+                    background-color: rgb(51, 116, 255);
+                    transition: .3s;
+                    color: white;
+                }
+            }
+        }
+        .filterToDo{
+            display: flex;
+            width: 100%;
+            padding: 20px 0px;
+            border-bottom: 1px solid rgb(226, 226, 226);
+            justify-content: space-around;
+
+            .bottomLine{
+                color: #3574FF;
+                border-bottom: 2px solid #3574FF;
+            }
+
+            div{
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 500;
+
+                &:hover{
+                    color: #3574FF;
+                    font-weight: 600;
+                }
+            }
+        }
+        .toDos{
+            width: 100%;
+            
+            .checked{
+                background-color: rgb(231, 231, 231);
+                border-bottom: 1px solid rgb(170, 170, 170) !important; 
+                p{
+                    text-decoration:line-through;
+                }
+            }
+
+            .toDo{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 40px;
+                border-bottom: 1px solid rgb(226, 226, 226);
+                
+                p{
+                    width: 380px;
+                    word-wrap: break-word;
+                }
+
+                .buttonWrapper{
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    i{
+                        @include mixins.flex-center;
+                        background-color: #d4d4d4;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: .3s;
+
+                        &:hover{
+                            background-color: #b1b1b1;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .displayEditToDo{
+        @include mixins.flex-center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 650px;
+        height: 300px;
+        background-color: white;
+
+        h2{
+            padding-bottom: 50px;
+            font-size: 35px;
+        }
+        
+        input{
+            width: 60%;
+            margin-bottom: 30px;
+            padding: 5px 10px;
+            outline: none;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        
+        .buttonsEdit{
+            display: flex;
+            gap: 50px;
+            
+            :first-child{
+                background-color: #6d9cff;
+                transition: .3s;
+                
+                &:hover{
+                    background-color: #4b84ff;
+                    transition: .3s;
+                }
+            }
+            
+            button{
+                border: none;
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: #dadada;
+                transition: .3s;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #c0c0c0;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+
+}

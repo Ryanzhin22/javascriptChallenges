@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/todolist.css">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="../components/footer.js" defer></script>
+    <script src="../js/todolist.js" defer></script>
+    <!-- TITLE -->
+    <title>Javascript Challenges | Cronômetro</title>
+</head>
+<body>
+    <div class="todolist">
+        <button onclick="window.history.back()" class="btnBack"><i class="fa-solid fa-arrow-left "></i></button>
+
+        <div class="displayToDo">
+            <h2>To Do List</h2>
+            <div class="inputWrapper">
+                <input type="text" placeholder="Adicione uma nova tarefa" id="addToDoInput">
+                <i class="addToDo fa-solid fa-plus"></i>
+            </div>
+            <div class="filterToDo">
+                <div>Todos</div>
+                <div>Pendentes</div>
+                <div>Completos</div>
+            </div>
+            <div class="toDos" id="toDos">
+                <!-- toDos -->
+                <div class="toDo checked completed">
+                    <p>Primeira tarefa do To Do</p>
+                    <div class="buttonWrapper">
+                        <i class="check fa-solid fa-check"></i>
+                        <i class="edit fa-solid fa-pen"></i>
+                        <i class="delete fa-solid fa-trash"></i>
+                    </div>
+                </div>
+                <div class="toDo pending">
+                    <p>Segunda tarefa do To Do</p>
+                    <div class="buttonWrapper">
+                        <i class="check fa-solid fa-check"></i>
+                        <i class="edit fa-solid fa-pen"></i>
+                        <i class="delete fa-solid fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="displayEditToDo disabled">
+            <h2>Editar To Do</h2>
+            <input type="text" class="inputEdit">
+            <div class="buttonsEdit">
+                <button class="confirmEdit">Confirmar</button>
+                <button class="cancelEdit">Cancelar</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer-component></footer-component>
+</body>
+</html>

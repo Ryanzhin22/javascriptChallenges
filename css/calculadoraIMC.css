@@ -1,0 +1,165 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.disappear {
+  display: none !important;
+}
+
+.calculadoraIMC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6BE00;
+  min-height: 100vh;
+  width: 100%;
+}
+.calculadoraIMC .btnBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 40px;
+  margin: 10px;
+  background-color: black;
+  border-radius: 40px;
+  color: white;
+  border: none;
+  box-shadow: inset 0 0 0 0 white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.calculadoraIMC .btnBack i {
+  font-size: 20px;
+}
+.calculadoraIMC .btnBack:hover {
+  box-shadow: inset 200px 0 0 0 white;
+  transition: 0.3s;
+}
+.calculadoraIMC .btnBack:hover i {
+  color: black;
+}
+.calculadoraIMC .calculadoraDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  width: 500px;
+  height: 500px;
+  background-color: #1F1E33;
+  border-radius: 5px;
+}
+.calculadoraIMC .calculadoraDisplay h2 {
+  color: #fff;
+  font-size: 32px;
+  padding: 40px 0;
+}
+.calculadoraIMC .calculadoraDisplayInput {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-bottom: 20px;
+}
+.calculadoraIMC .calculadoraDisplayInput input {
+  padding: 15px 10px;
+}
+.calculadoraIMC .calculadoraDisplayInput label {
+  color: white;
+  padding-bottom: 5px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.calculadoraIMC .calculadoraDisplayButtons {
+  padding-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+.calculadoraIMC .calculadoraDisplayButtons button {
+  width: 190px;
+  height: 50px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  background-color: #37383C;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.calculadoraIMC .calculadoraDisplayButtons button:hover {
+  background-color: #272525;
+  transition: 0.3s;
+}
+.calculadoraIMC .calculadoraDisplayButtons .calc {
+  background-color: #D23631;
+  transition: 0.3s;
+}
+.calculadoraIMC .calculadoraDisplayButtons .calc:hover {
+  background-color: #b6312c;
+  transition: 0.3s;
+}
+.calculadoraIMC .ratingsDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  width: 500px;
+  height: 550px;
+  background-color: #1F1E33;
+  border-radius: 5px;
+  color: white;
+}
+.calculadoraIMC .ratingsDisplay span {
+  color: #F6BE00;
+}
+.calculadoraIMC .ratingsDisplay h2 {
+  padding-top: 40px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.calculadoraIMC .ratingsDisplay h3 {
+  font-size: 26px;
+  font-weight: 300;
+  padding: 10px 0px;
+}
+.calculadoraIMC .ratingsDisplay h4 {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.calculadoraIMC .ratingsDisplay .table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 20px;
+}
+.calculadoraIMC .ratingsDisplay .table .tableHead, .calculadoraIMC .ratingsDisplay .table .tableRating {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0px;
+  border-bottom: 1px solid #444;
+}
+.calculadoraIMC .ratingsDisplay .table .tableHead p, .calculadoraIMC .ratingsDisplay .table .tableRating p {
+  flex: 1;
+  text-align: center;
+}
+.calculadoraIMC .ratingsDisplay button {
+  width: 140px;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  background-color: #D23631;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.calculadoraIMC .ratingsDisplay button:hover {
+  background-color: #b6312c;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=calculadoraIMC.css.map */

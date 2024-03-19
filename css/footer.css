@@ -1,0 +1,101 @@
+footer-component {
+  width: 100%;
+}
+footer-component footer {
+  width: 100% !important;
+  min-height: 300px;
+  background-color: #1d1d1d;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+footer-component footer .containerFooter {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer-component footer .containerFooter .calcInfo {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer-component footer .containerFooter .calcInfo h2 {
+  font: 20px;
+  text-transform: lowercase;
+}
+footer-component footer .containerFooter .calcInfo p {
+  font-size: 14px;
+}
+footer-component footer .containerFooter .calcInfoCopy {
+  font-size: 12px !important;
+  padding-top: 10px;
+}
+footer-component footer .containerFooter .moreContent {
+  display: flex;
+  justify-content: space-around;
+  max-width: 400px;
+  gap: 100px;
+}
+footer-component footer .containerFooter .moreContent .moreProjects ul a:hover ::after {
+  width: 100%;
+}
+footer-component footer .containerFooter .moreContent .moreProjects ul a ::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #F6BE00;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+footer-component footer .containerFooter .moreContent .moreProjects h3, footer-component footer .containerFooter .moreContent .socialMedias h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+footer-component footer .containerFooter .moreContent .moreProjects ul, footer-component footer .containerFooter .moreContent .socialMedias ul {
+  padding-top: 10px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+}
+footer-component footer .containerFooter .moreContent .moreProjects ul a, footer-component footer .containerFooter .moreContent .socialMedias ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+  position: relative;
+  width: auto;
+}
+footer-component footer .containerFooter .moreContent .moreProjects ul a:hover, footer-component footer .containerFooter .moreContent .socialMedias ul a:hover {
+  color: #F6BE00;
+  transition: 0.3s;
+}
+
+@media (max-width: 950px) {
+  .containerFooter {
+    padding: 20px !important;
+    gap: 20px;
+  }
+  .calcInfo p {
+    font-size: 12px !important;
+  }
+  .moreProjects h3, .socialMedias h3 {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 500px) {
+  .containerFooter {
+    flex-direction: column !important;
+  }
+  .moreContent {
+    gap: 40px !important;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

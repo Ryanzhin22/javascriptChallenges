@@ -1,0 +1,199 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.todolist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6BE00;
+  min-height: 100vh;
+  padding: 40px;
+}
+.todolist .btnBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 40px;
+  margin: 10px;
+  background-color: black;
+  border-radius: 40px;
+  color: white;
+  border: none;
+  box-shadow: inset 0 0 0 0 white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.todolist .btnBack i {
+  font-size: 20px;
+}
+.todolist .btnBack:hover {
+  box-shadow: inset 200px 0 0 0 white;
+  transition: 0.3s;
+}
+.todolist .btnBack:hover i {
+  color: black;
+}
+.todolist .disabled {
+  display: none !important;
+}
+.todolist .displayToDo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  padding: 40px;
+  width: 700px;
+  min-height: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.todolist .displayToDo h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.todolist .displayToDo .inputWrapper {
+  display: flex;
+}
+.todolist .displayToDo .inputWrapper input {
+  width: 500px;
+  height: 50px;
+  outline: none;
+  border-radius: 6px 0px 0px 6px;
+  border: 1px solid black;
+  border-right: none;
+  padding: 0px 10px;
+  font-size: 16px;
+}
+.todolist .displayToDo .inputWrapper .addToDo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5f91ff;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 0px 6px 6px 0px;
+  transition: 0.3s;
+}
+.todolist .displayToDo .inputWrapper .addToDo:hover {
+  background-color: rgb(51, 116, 255);
+  transition: 0.3s;
+  color: white;
+}
+.todolist .displayToDo .filterToDo {
+  display: flex;
+  width: 100%;
+  padding: 20px 0px;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  justify-content: space-around;
+}
+.todolist .displayToDo .filterToDo .bottomLine {
+  color: #3574FF;
+  border-bottom: 2px solid #3574FF;
+}
+.todolist .displayToDo .filterToDo div {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+.todolist .displayToDo .filterToDo div:hover {
+  color: #3574FF;
+  font-weight: 600;
+}
+.todolist .displayToDo .toDos {
+  width: 100%;
+}
+.todolist .displayToDo .toDos .checked {
+  background-color: rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(170, 170, 170) !important;
+}
+.todolist .displayToDo .toDos .checked p {
+  text-decoration: line-through;
+}
+.todolist .displayToDo .toDos .toDo {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+.todolist .displayToDo .toDos .toDo p {
+  width: 380px;
+  word-wrap: break-word;
+}
+.todolist .displayToDo .toDos .toDo .buttonWrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.todolist .displayToDo .toDos .toDo .buttonWrapper i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4d4d4;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.todolist .displayToDo .toDos .toDo .buttonWrapper i:hover {
+  background-color: #b1b1b1;
+  transition: 0.3s;
+}
+.todolist .displayEditToDo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 650px;
+  height: 300px;
+  background-color: white;
+}
+.todolist .displayEditToDo h2 {
+  padding-bottom: 50px;
+  font-size: 35px;
+}
+.todolist .displayEditToDo input {
+  width: 60%;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.todolist .displayEditToDo .buttonsEdit {
+  display: flex;
+  gap: 50px;
+}
+.todolist .displayEditToDo .buttonsEdit :first-child {
+  background-color: #6d9cff;
+  transition: 0.3s;
+}
+.todolist .displayEditToDo .buttonsEdit :first-child:hover {
+  background-color: #4b84ff;
+  transition: 0.3s;
+}
+.todolist .displayEditToDo .buttonsEdit button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #dadada;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.todolist .displayEditToDo .buttonsEdit button:hover {
+  background-color: #c0c0c0;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=todolist.css.map */

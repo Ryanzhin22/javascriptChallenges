@@ -1,0 +1,110 @@
+@use 'variables';
+@use 'mixins';
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.cronometro{
+    @include mixins.flex-center;
+    @include mixins.btnBack;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: variables.$primaryColor;
+
+    .displayCronometro{
+        @include mixins.flex-center;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: #262626;
+        width: 450px;
+        height: 550px;
+        border-radius: 10px;
+        padding: 2rem;
+
+        .cronometroTimer{
+            @include mixins.flex-center;
+            width: 350px;
+            height: 350px;
+            background-color: #262626;
+            border: 3px solid variables.$primaryColor;
+            border-radius: 50%;
+            color: white;
+            font-size: 36px;
+
+            .timer{
+                @include mixins.flex-center;
+                text-align: center;
+                span{
+                    width: 50px !important;
+                }
+            }
+        }
+
+        .buttons{
+            display: flex;
+            gap: 10px;
+
+            button{
+                background-color: aliceblue;
+                width: 100px;
+                height: 50px;
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover{
+                    background-color: rgb(250, 248, 215);
+                    transition: .3s;
+                }
+            }
+        }
+
+        .marks{
+            
+            color: white;
+            font-size: 20px;
+        }
+    }
+
+    .marks{
+        @include mixins.flex-center;
+        flex-direction: column;
+        justify-content: start;
+        display: none;
+        width: 450px;
+        min-height: 550px;
+        background-color: #262626;
+        border-radius: 10px;
+        
+        h2{
+            width: 80%;
+            color: variables.$primaryColor;
+            text-align: center;
+            padding: 20px 0px 10px 0px;
+            font-size: 30px;
+            border-bottom: 2px solid variables.$primaryColor;
+            margin-bottom: 10px;
+        }
+        
+        .markdown{
+            padding-top: 5px;
+            font-size: 18px;
+            color: white;
+        }
+    }
+
+}
+
+// RESPONSIVO
+
+@media (max-width: 950px){
+    .cronometro{
+        flex-direction: column;
+    }
+}

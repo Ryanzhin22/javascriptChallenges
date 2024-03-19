@@ -1,2 +1,2 @@
 # javascriptChallenges
-Um projeto que reúne desafios básicos de Javascript
+ Um site que reune diversos desafios em javascript e os seus respectivos códigos

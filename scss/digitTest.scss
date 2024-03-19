@@ -1,0 +1,16 @@
+@use 'variables';
+@use 'mixins';
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.digitTest{
+    @include mixins.btnBack;
+    background-color: variables.$primaryColor;
+    min-height: 100vh;
+    width: 100%;
+}

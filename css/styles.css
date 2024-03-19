@@ -1,0 +1,573 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F6BE00;
+}
+
+.menu {
+  display: none;
+}
+.menu i {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header.active {
+  min-height: 500px;
+  width: 100%;
+  align-items: start;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header.active .headerNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+}
+.header.active .headerNav .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+}
+.header.active .headerNav .headerNavContent {
+  display: block;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+.header.active .headerNav .headerNavContent a {
+  margin: 10px;
+  border-bottom: 2px solid white;
+}
+.header.active .headerNav .headerNavContent img {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  height: 10vh;
+  font-family: "Poppins", sans-serif;
+}
+.headerNav {
+  width: 100%;
+}
+.headerNavContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+.headerNavContent img {
+  width: 90px;
+}
+.headerNavContent a {
+  text-decoration: none;
+  list-style-type: none;
+}
+.headerNavContent a li {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s;
+}
+.headerNavContent a li:hover {
+  color: #F6BE00;
+  transition: 0.3s;
+}
+
+.contentContainer {
+  height: 650px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  max-width: 1400px;
+}
+.contentContainerTitle {
+  margin-top: 100px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentContainerTitle p {
+  padding: 10px 30px;
+  background-color: black;
+  color: #F6BE00;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+}
+.contentContainerTitle h1 {
+  font-size: 102px;
+  padding-top: 10px;
+}
+.contentContainerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contentContainerText h2 {
+  font-size: 32px;
+}
+.contentContainerText p {
+  padding-top: 18px;
+  font-size: 16px;
+}
+.contentContainerButton {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px 40px;
+  margin-top: 32px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.contentContainerButton:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: 0.3s;
+  background-color: rgb(245, 245, 245);
+}
+
+.calculatorSection {
+  background-color: black;
+}
+.calculatorSection div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  gap: 30px;
+}
+.calculatorSection div:first-child img {
+  max-width: 250px;
+  margin: 50px 20px;
+  border-radius: 20px;
+}
+.calculatorSection div:first-child div {
+  color: white;
+  padding-right: 20px;
+  max-width: 800px;
+}
+.calculatorSection div:first-child div h2 {
+  font-size: 40px;
+}
+.calculatorSection div:first-child div .buttons {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.calculatorSection div:first-child div .buttons button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.calculatorSection div:first-child div .buttons button:hover {
+  box-shadow: inset 200px 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+
+.timerSection {
+  background-color: transparent;
+}
+.timerSection div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  gap: 30px;
+}
+.timerSection div:first-child img {
+  max-width: 250px;
+  margin: 50px 20px;
+  border-radius: 20px;
+}
+.timerSection div:first-child div {
+  color: white;
+  padding-left: 20px;
+  max-width: 800px;
+}
+.timerSection div:first-child div h2 {
+  font-size: 40px;
+}
+.timerSection div:first-child div .buttons {
+  padding: 20px 0 0 0;
+  display: flex;
+  gap: 20px;
+}
+.timerSection div:first-child div .buttons button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.timerSection div:first-child div .buttons button:hover {
+  box-shadow: inset 200px 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.timerSection .buttons button {
+  box-shadow: inset 0 0 0 0 black !important;
+}
+.timerSection .buttons button:hover {
+  box-shadow: inset 200px 0 0 0 black !important;
+  color: white !important;
+}
+
+.toDoListSection {
+  background-color: white;
+}
+.toDoListSection div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  gap: 30px;
+}
+.toDoListSection div:first-child img {
+  max-width: 250px;
+  margin: 50px 20px;
+  border-radius: 20px;
+}
+.toDoListSection div:first-child div {
+  color: white;
+  padding-right: 20px;
+  max-width: 800px;
+}
+.toDoListSection div:first-child div h2 {
+  font-size: 40px;
+}
+.toDoListSection div:first-child div .buttons {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.toDoListSection div:first-child div .buttons button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.toDoListSection div:first-child div .buttons button:hover {
+  box-shadow: inset 200px 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.toDoListSection .toDoListText {
+  color: black !important;
+}
+
+.IMCSection div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  gap: 30px;
+}
+.IMCSection div:first-child img {
+  max-width: 250px;
+  margin: 50px 20px;
+  border-radius: 20px;
+}
+.IMCSection div:first-child div {
+  color: white;
+  padding-left: 20px;
+  max-width: 800px;
+}
+.IMCSection div:first-child div h2 {
+  font-size: 40px;
+}
+.IMCSection div:first-child div .buttons {
+  padding: 20px 0 0 0;
+  display: flex;
+  gap: 20px;
+}
+.IMCSection div:first-child div .buttons button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.IMCSection div:first-child div .buttons button:hover {
+  box-shadow: inset 200px 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.IMCSection .buttons button {
+  box-shadow: inset 0 0 0 0 black !important;
+}
+.IMCSection .buttons button:hover {
+  box-shadow: inset 200px 0 0 0 black !important;
+  color: white !important;
+}
+
+.ClimaSection {
+  background-color: black;
+}
+.ClimaSection div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  gap: 30px;
+}
+.ClimaSection div:first-child img {
+  max-width: 250px;
+  margin: 50px 20px;
+  border-radius: 20px;
+}
+.ClimaSection div:first-child div {
+  color: white;
+  padding-right: 20px;
+  max-width: 800px;
+}
+.ClimaSection div:first-child div h2 {
+  font-size: 40px;
+}
+.ClimaSection div:first-child div .buttons {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.ClimaSection div:first-child div .buttons button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.ClimaSection div:first-child div .buttons button:hover {
+  box-shadow: inset 200px 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+
+.DigitTestSection div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  gap: 30px;
+}
+.DigitTestSection div:first-child img {
+  max-width: 250px;
+  margin: 50px 20px;
+  border-radius: 20px;
+}
+.DigitTestSection div:first-child div {
+  color: white;
+  padding-left: 20px;
+  max-width: 800px;
+}
+.DigitTestSection div:first-child div h2 {
+  font-size: 40px;
+}
+.DigitTestSection div:first-child div .buttons {
+  padding: 20px 0 0 0;
+  display: flex;
+  gap: 20px;
+}
+.DigitTestSection div:first-child div .buttons button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.DigitTestSection div:first-child div .buttons button:hover {
+  box-shadow: inset 200px 0 0 0 #F6BE00;
+  transition: ease-in-out 0.4s;
+}
+.DigitTestSection .buttons button {
+  box-shadow: inset 0 0 0 0 black !important;
+}
+.DigitTestSection .buttons button:hover {
+  box-shadow: inset 200px 0 0 0 black !important;
+  color: white !important;
+}
+
+@media (max-width: 1300px) {
+  .headerNavContent {
+    gap: 30px;
+  }
+  .contentContainerTitle h1 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 950px) {
+  .headerNav {
+    display: flex;
+    justify-content: end;
+  }
+  .headerNav .menu {
+    padding-right: 20px;
+  }
+  .headerNav .menu i {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .headerNav .menu i:hover {
+    color: #F6BE00;
+    transition: 0.3s;
+  }
+  .menu {
+    display: block;
+  }
+  .headerNavContent {
+    display: none;
+  }
+  .contentContainer {
+    padding: 0px 20px;
+    height: 400px;
+  }
+  .contentContainerTitle {
+    margin-top: 40px;
+  }
+  .contentContainerTitle p {
+    font-size: 16px;
+  }
+  .contentContainerTitle h1 {
+    font-size: 34px;
+  }
+  .contentContainerText h2 {
+    font-size: 20px;
+  }
+  section div:first-child {
+    flex-direction: column !important;
+    padding-bottom: 30px;
+  }
+  section div:first-child img {
+    margin: 40px 0px 0px 0px !important;
+  }
+  section div:first-child div {
+    padding: 0px 20px;
+    max-width: 600px;
+  }
+  section div:first-child div h2 {
+    text-align: center;
+  }
+  section div:first-child div .buttons {
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .contentContainerTitle h1, .contentContainerTitle p {
+    text-align: center;
+  }
+  .contentContainer {
+    height: 550px;
+  }
+  .contentContainerTitle {
+    margin-top: 20px;
+  }
+  .buttons button {
+    width: 120px !important;
+  }
+  section div:first-child img {
+    max-width: 300px;
+  }
+  section div:first-child div h2 {
+    text-align: center;
+    font-size: 36px !important;
+  }
+  section div:first-child div p {
+    font-size: 14px !important;
+    text-align: center;
+  }
+}
+@media (max-width: 350px) {
+  .menu {
+    padding: 0px !important;
+  }
+  .contentContainerText p {
+    font-size: 14px;
+  }
+  .contentContainer {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contentContainerTitle {
+    margin-top: 20px;
+  }
+  .contentContainerButton {
+    font-size: 12px;
+  }
+  section div:first-child img {
+    max-width: 200px !important;
+  }
+  section div:first-child div h2 {
+    font-size: 28px !important;
+  }
+  section div:first-child div p {
+    font-size: 12px !important;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

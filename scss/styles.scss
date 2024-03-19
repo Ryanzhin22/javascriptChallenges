@@ -1,0 +1,381 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: variables.$primaryColor;
+}
+
+.menu{
+    display: none;
+    i{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.header.active{
+    min-height: 500px;
+    width: 100%;
+    align-items: start;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .headerNav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+
+        .menu{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-top: 10px;
+        }
+        
+        .headerNavContent{
+            display: block;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 50vh;
+
+            a{
+                margin: 10px;
+                border-bottom: 2px solid white;
+            }
+    
+            img{
+                display: none;
+            }
+        }
+    }
+
+}
+
+.header{
+
+    @include mixins.flex-center;
+    background-color: variables.$headerBg;
+    color: white;
+    height: 10vh;
+    font-family: variables.$fontFamilyDefault;
+
+    &Nav{
+        width: 100%;
+
+        &Content{
+            @include mixins.flex-center;
+            gap: 90px;
+
+            img{
+                width: 90px;
+            }
+
+            a{
+                text-decoration: none;
+                list-style-type: none;
+
+                li{
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: white;
+                    transition: .3s;
+    
+                    &:hover{
+                        color: variables.$primaryColor;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }   
+}
+
+.contentContainer{
+    height: 650px;
+    margin: 0 auto;
+    font-family: variables.$fontFamilyDefault;
+    max-width: 1400px;
+
+    &Title{
+        margin-top: 100px;
+        flex-direction: column;
+        @include mixins.flex-center;
+
+        p{
+            padding: 10px 30px;
+            background-color: black;
+            color: variables.$primaryColor;
+            width: auto;
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        h1{
+            font-size: 102px;
+            padding-top: 10px;
+        }
+    }
+
+    &Text{
+        @include mixins.flex-center;
+        flex-direction: column;
+        margin-top: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+
+        h2{
+            font-size: 32px;
+        }
+
+        p{
+            padding-top: 18px;
+            font-size: 16px;
+        }
+    }
+
+    &Button{
+        display: flex;
+        margin: 0 auto;
+        padding: 10px 40px;
+        margin-top: 32px;
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: variables.$fontFamilyDefault;
+        cursor: pointer;
+        font-weight: 600;
+        transition: .3s;
+
+        &:hover{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            transition: .3s;
+            background-color: rgb(245, 245, 245);
+        }
+    }
+}
+
+.calculatorSection{
+    background-color: black;
+    @include mixins.sectionImgLeft;
+}
+
+.timerSection{
+    background-color: transparent;
+    @include mixins.sectionImgRight;
+    @include mixins.buttonsSectionBlack
+}
+
+.toDoListSection{
+    background-color: white;
+    @include mixins.sectionImgLeft;
+
+    .toDoListText{
+        color: black !important;
+    }
+}
+
+.IMCSection{
+    @include mixins.sectionImgRight;
+    @include mixins.buttonsSectionBlack;
+
+}
+
+.ClimaSection{
+    @include mixins.sectionImgLeft;
+    background-color: black;
+}
+
+.DigitTestSection{
+    @include mixins.sectionImgRight;
+    @include mixins.buttonsSectionBlack
+}
+
+// RESPONSIVO
+
+@media (max-width: 1300px){
+    //header
+    .headerNavContent{
+        gap: 30px;
+    }
+    //main
+    .contentContainerTitle{
+        h1{
+            font-size: 70px;
+        }
+    }
+}
+
+@media (max-width: 950px){
+    //header
+
+    .headerNav{
+        display: flex;
+        justify-content: end;
+        .menu{
+            padding-right: 20px;
+            i{
+                cursor: pointer;
+                transition: .3s;
+                &:hover{
+                    color: variables.$primaryColor;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .headerNavContent{
+        display: none;
+    }
+    // main
+    .contentContainer{
+        padding: 0px 20px;
+        height: 400px;
+        &Title{
+            margin-top: 40px;
+        }
+    }
+    .contentContainerTitle{
+        p{
+            font-size: 16px;
+        }
+        h1{
+            font-size: 34px;
+        }
+    }
+    .contentContainerText{
+        h2{
+            font-size: 20px;
+        }
+    }
+
+    //TODAS AS SECTIONS 
+    section{
+        div:first-child{
+            flex-direction: column !important;
+            padding-bottom: 30px;
+            
+            img{
+                margin: 40px 0px 0px 0px !important;
+            }
+    
+            div{
+                padding: 0px 20px;
+                max-width: 600px;
+    
+                h2{
+                    text-align: center;
+                }
+    
+                .buttons{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 500px){
+    .contentContainerTitle{
+        h1, p{
+            text-align: center;
+        }
+    }
+    .contentContainer{
+        height: 550px;
+        &Title{
+            margin-top: 20px;
+        }
+    }
+
+    .buttons{
+        button{
+            width: 120px !important; 
+        }
+    }
+
+    //TODAS AS SECTIONS 
+    section{
+        div:first-child{
+            img{
+                max-width: 300px;
+            }
+            div{
+                h2{
+                    text-align: center;
+                    font-size: 36px !important;
+                }
+                p{
+                    font-size: 14px !important;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 350px){
+
+    .menu{
+        padding: 0px !important;
+    }
+    
+    .contentContainerText{
+        p{
+            font-size: 14px;
+        }
+    }
+    .contentContainer{
+        height: 700px;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &Title{
+            margin-top: 20px;
+        }
+
+        &Button{
+            font-size: 12px;
+        }
+    }
+
+    //TODAS AS SECTIONS 
+    section{
+        div:first-child{
+            img{
+                max-width: 200px !important;
+            }
+            div{
+                h2{
+                    font-size: 28px !important;
+                }
+                p{
+                    font-size: 12px !important;
+                }
+            }
+        }
+    }
+}

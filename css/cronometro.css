@@ -1,0 +1,128 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.cronometro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #F6BE00;
+}
+.cronometro .btnBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 40px;
+  margin: 10px;
+  background-color: black;
+  border-radius: 40px;
+  color: white;
+  border: none;
+  box-shadow: inset 0 0 0 0 white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.cronometro .btnBack i {
+  font-size: 20px;
+}
+.cronometro .btnBack:hover {
+  box-shadow: inset 200px 0 0 0 white;
+  transition: 0.3s;
+}
+.cronometro .btnBack:hover i {
+  color: black;
+}
+.cronometro .displayCronometro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #262626;
+  width: 450px;
+  height: 550px;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.cronometro .displayCronometro .cronometroTimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  background-color: #262626;
+  border: 3px solid #F6BE00;
+  border-radius: 50%;
+  color: white;
+  font-size: 36px;
+}
+.cronometro .displayCronometro .cronometroTimer .timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cronometro .displayCronometro .cronometroTimer .timer span {
+  width: 50px !important;
+}
+.cronometro .displayCronometro .buttons {
+  display: flex;
+  gap: 10px;
+}
+.cronometro .displayCronometro .buttons button {
+  background-color: aliceblue;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cronometro .displayCronometro .buttons button:hover {
+  background-color: rgb(250, 248, 215);
+  transition: 0.3s;
+}
+.cronometro .displayCronometro .marks {
+  color: white;
+  font-size: 20px;
+}
+.cronometro .marks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  display: none;
+  width: 450px;
+  min-height: 550px;
+  background-color: #262626;
+  border-radius: 10px;
+}
+.cronometro .marks h2 {
+  width: 80%;
+  color: #F6BE00;
+  text-align: center;
+  padding: 20px 0px 10px 0px;
+  font-size: 30px;
+  border-bottom: 2px solid #F6BE00;
+  margin-bottom: 10px;
+}
+.cronometro .marks .markdown {
+  padding-top: 5px;
+  font-size: 18px;
+  color: white;
+}
+
+@media (max-width: 950px) {
+  .cronometro {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=cronometro.css.map */

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/clima.css">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="../components/footer.js" defer></script>
+    <script src="../js/clima.js" defer></script>
+    <!-- TITLE -->
+    <title>Javascript Challenges | Aplicação de Clima </title>
+</head>
+<body>
+    <div class="clima">
+        <button onclick="window.history.back()" class="btnBack"><i class="fa-solid fa-arrow-left "></i></button>
+        
+        <div class="climaDisplay">
+            <div class="climaDisplaySearch">
+                <h3>Confira o clima de: </h3>
+                <div class="inputWrapper">
+                    <input type="text" name="searchClima" id="searchClima" placeholder="Maceió">
+                    <i class="btnSearchClima fas fa-search"></i>
+                </div>
+            </div>
+            <div class="climaDisplayInfos disappear">
+                <div class="climaInfo">
+                    <h2 id="climaTemp"></h2>
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+                <div class="climaLocal">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p id="climaCity"></p>
+                    <img id="climaFlag" alt="bandeira do país">
+                </div>
+                <div class="climaCondicao">
+                    <img id="climaIcon"  alt="condicao do clima">
+                    <p id="climaDesc"></p>
+                </div>
+                <div class="climaMoreInfos">
+                    <div class="humidade">
+                        <i class="fa-solid fa-droplet"></i>
+                        <span id="climaHumidity"></span>
+                    </div>
+                    <div class="vento">
+                        <i class="fa-solid fa-wind"></i>
+                        <span id="climaWind"></span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="celsius">Celsius</button>
+                    <button class="fahrenheit">Fahrenheit</button>
+                    <button class="kelvin">Kelvin</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer-component></footer-component>
+</body>
+</html>

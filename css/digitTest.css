@@ -1,0 +1,38 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.digitTest {
+  background-color: #F6BE00;
+  min-height: 100vh;
+  width: 100%;
+}
+.digitTest .btnBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 40px;
+  margin: 10px;
+  background-color: black;
+  border-radius: 40px;
+  color: white;
+  border: none;
+  box-shadow: inset 0 0 0 0 white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.digitTest .btnBack i {
+  font-size: 20px;
+}
+.digitTest .btnBack:hover {
+  box-shadow: inset 200px 0 0 0 white;
+  transition: 0.3s;
+}
+.digitTest .btnBack:hover i {
+  color: black;
+}
+
+/*# sourceMappingURL=digitTest.css.map */
