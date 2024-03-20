@@ -14,7 +14,7 @@ class Header extends HTMLElement {
                 <a href="#todo"><li>To Do List</li></a>
                 <img src="imgs/logo.png" alt="logo">
                 <a href="#imc"><li>Calculadora IMC</li></a>
-                <a href="#clima"><li>Clima</li></a>
+                <a href="#memory"><li>Jogo da Memória</li></a>
                 <a href="#digit"><li>Teste de Digitação</li></a>
             </ul>
             <div class="menu" id="menu">

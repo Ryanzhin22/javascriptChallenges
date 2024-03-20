@@ -8,11 +8,83 @@
     font-family: "Poppins", sans-serif;
 }
 
-.disappear{
-    display: none !important;
-}
-
 .memoryGame{
+    @include mixins.flex-center;
     @include mixins.btnBack;
+    min-height:100vh;
+    background-color: variables.$primaryColor;
+
+    &Display{
+        @include mixins.flex-center;
+        flex-direction: column;
+        min-height: 400px;
+        width: 500px;
+        background-color: #fff;
+
+        h2{
+            padding-top: 30px;
+            text-transform: uppercase;
+            font-size: 34px;
+            letter-spacing: 1px;
+        }
+
+        .game{
+            width: 440px;
+            height: 480px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            transform-style: preserve-3d;
+            perspective: 500px;
+            padding: 20px 0px;
+
+            .emojiBox{
+                @include mixins.flex-center;
+                width: 100px;
+                height: 100px;
+                background-color: #ebebeb;
+                font-size: 44px;
+                cursor: pointer;
+                position: relative;
+                transition: .25s;
+                transform: rotateY(180deg);
+            }
+
+            .emojiBox.openBox{
+                transform: rotateY(0deg);
+            }
+
+            
+            .emojiBox:after{
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: #ebebeb;
+                // opacity: .5;
+                transition: .25s;
+                transform: rotateY(0deg);
+                backface-visibility: hidden;
+            }
+
+            .boxMatch{
+                transform: rotateY(0deg);
+            }
+
+            .openBox:after, .boxMatch::after{
+                transform: rotateY(180deg);
+            }
+        }
+
+        button{
+            border: none;
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
+            background-color: variables.$primaryColor;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+    }
 }
 
