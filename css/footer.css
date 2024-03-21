@@ -89,6 +89,11 @@ footer-component footer .containerFooter .moreContent .moreProjects ul a:hover, 
     font-size: 14px !important;
   }
 }
+@media (max-width: 775px) {
+  .moreContent {
+    gap: 20px !important;
+  }
+}
 @media (max-width: 500px) {
   .containerFooter {
     flex-direction: column !important;

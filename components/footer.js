@@ -1,29 +1,27 @@
-const head = document.head
+const head = document.head;
 
 // ICON ADD
-const linkIcon = document.createElement("link")
-linkIcon.rel = "shortcut icon"
-linkIcon.type = "image/x-icon"
-linkIcon.href = "../imgs/favicon-32x32.png"
+const linkIcon = document.createElement('link');
+linkIcon.rel = 'shortcut icon';
+linkIcon.type = 'image/x-icon';
+linkIcon.href = '../imgs/favicon-32x32.png';
 
-head.appendChild(linkIcon)
+head.appendChild(linkIcon);
 
 // LINK CSS
-const linkCSS = document.createElement("link")
-linkCSS.rel = "stylesheet"
-linkCSS.type = "text/css"
-linkCSS.href = "../css/footer.css"
+const linkCSS = document.createElement('link');
+linkCSS.rel = 'stylesheet';
+linkCSS.type = 'text/css';
+linkCSS.href = '../css/footer.css';
 
-head.appendChild(linkCSS)
+head.appendChild(linkCSS);
 
-
-class Footer extends HTMLElement{
-    constructor(){
-        super()
+class Footer extends HTMLElement {
+    constructor() {
+        super();
     }
-    
-    connectedCallback(){
-        
+
+    connectedCallback() {
         this.innerHTML = `
         
             <footer>
@@ -37,10 +35,12 @@ class Footer extends HTMLElement{
                         <div class="moreProjects">
                             <h3>Mais Projetos</h3>
                             <ul>
-                                <a href=""><li>To do list</li></a>
-                                <a href=""><li>Cronometro</li></a>
-                                <a href=""><li>To do list</li></a>
-                                <a href=""><li>Cronometro</li></a>
+                                <a href="#calc"><li>Calculadora</li></a>
+                                <a href="#timer"><li>Cronometro</li></a>
+                                <a href="#todo"><li>To do list</li></a>
+                                <a href="#imc"><li>Calculadora IMC</li></a>
+                                <a href="#memory"><li>Jogo da Memória</li></a>
+                                <a href="#digit"><li>Teste de digitação</li></a>
                             </ul>
                         </div>
                         <div class="socialMedias">
@@ -58,4 +58,4 @@ class Footer extends HTMLElement{
     }
 }
 
-customElements.define("footer-component", Footer)
+customElements.define('footer-component', Footer);
