@@ -105,7 +105,7 @@ body{
 }
 
 .contentContainer{
-    height: 650px;
+    min-height: 500px;
     margin: 0 auto;
     font-family: variables.$fontFamilyDefault;
     max-width: 1400px;
@@ -250,7 +250,7 @@ body{
     // main
     .contentContainer{
         padding: 0px 20px;
-        height: 400px;
+        min-height: 370px !important;
         &Title{
             margin-top: 40px;
         }

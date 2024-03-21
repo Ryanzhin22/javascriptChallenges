@@ -21,6 +21,19 @@
     <div class="digitTest">
         <button onclick="window.history.back()" class="btnBack"><i class="fa-solid fa-arrow-left "></i></button>
         
+        <div class="digitTestDisplay">
+            <h2>Teste de Digitação</h2>
+            <p>Esse é um teste de digitação onde você será apresentado na sua tela uma frase e você terá que digitá-la o mais rápido possível, após conseguir seu tempo será mostrado logo abaixo da área de digitar o texto. Dê o seu melhor e escreva o mais rápido possível!</p>
+            <div class="digitTestText"></div>
+            <textarea name="fraseDigitada" id="fraseDigitada" cols="30" rows="6" placeholder="Digite a frase acima aqui!"></textarea>
+            <div class="buttons">
+                <button class="reset">Resetar</button>
+                <button class="showHistory">Mostrar histórico</button>
+            </div>
+            <div class="textHistory hide">
+                <h3>Histórico</h3>
+            </div>
+        </div>
     </div>
     
     <footer-component></footer-component>

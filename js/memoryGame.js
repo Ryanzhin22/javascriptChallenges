@@ -28,7 +28,7 @@ for(var i=0 ; i < emojis.length ; i++){
                     selectedBox[1].classList.remove("openBox")
                 }
             }
-        }, 500);
+        }, 350);
     })
 
 
