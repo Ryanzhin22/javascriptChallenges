@@ -10,7 +10,6 @@ const frasesArray = [
     'Tente digitar isso o mais rápido que você conseguir',
     'ABC Testando, digite TUDO isso',
     'Se você digitar tudo isso em menos de 10 segundos eu fico te devendo uma coxinha e uma guaraná!',
-    'Se você digitar tudo isso em menos de 10 segundos eu fico te devendo uma coxinha e uma guaraná!',
 ];
 
 const novoTexto = () => { 

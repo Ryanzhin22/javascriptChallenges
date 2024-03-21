@@ -28,7 +28,7 @@ class Footer extends HTMLElement {
                 <div class="containerFooter">
                     <div class="calcInfo">
                         <h2>footer.JS</h2>
-                        <p>Esse é um projet que eu tive a ideia de fazer para reunir todos esse projetos mais simples em um só de uma forma eficaz. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed ducimus, recusandae in placeat aspernatur, ullam quia saepe tenetur excepturi adipisci velit laborum et tempore, dolorum totam non eius veniam dolore!</p>
+                        <p>Esse é um projeto que eu tive a ideia de fazer para reunir todos esse projetos mais simples em um só de uma forma eficaz. Aqui poderão ser adicionados futuramente mais projetos, mas a princípio a ideia foi de fazer apenas 6 projetos de javascript "simples" e mostrar eles em ação, funcionando simultaneamente no mesmo site e mostrar também o código por trás de todos eles.</p>
                         <p class="calcInfoCopy">Criado e desenvolvido por &copy;Ryan 2024</p>
                     </div>
                     <div class="moreContent">
