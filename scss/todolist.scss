@@ -190,3 +190,24 @@
     }
 
 }
+
+@media (max-width: 550px){
+    .displayToDo{
+        width: 400px !important;
+        padding: 20px !important;
+
+        .inputWrapper{
+            input{
+                width: 300px !important;
+            }
+        }
+        .toDo{
+            padding: 10px 5px !important;
+            
+            .buttonWrapper{
+                gap: 5px !important;
+            }
+        }
+
+    }
+}

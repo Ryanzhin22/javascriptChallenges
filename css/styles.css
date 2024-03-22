@@ -48,11 +48,19 @@ body {
   flex-direction: column;
   height: 50vh;
 }
+.header.active .headerNav .headerNavContent #imgLogo {
+  display: none;
+}
 .header.active .headerNav .headerNavContent a {
   margin: 10px;
   border-bottom: 2px solid white;
+  transition: 0.3s;
 }
-.header.active .headerNav .headerNavContent img {
+.header.active .headerNav .headerNavContent a:hover {
+  border-bottom: 2px solid #F6BE00;
+  transition: 0.3s;
+}
+.header.active .headerNav .headerNavContent a img {
   display: none;
 }
 
@@ -80,6 +88,9 @@ body {
 .headerNavContent a {
   text-decoration: none;
   list-style-type: none;
+}
+.headerNavContent a img {
+  padding-top: 15px;
 }
 .headerNavContent a li {
   font-size: 18px;
@@ -133,6 +144,9 @@ body {
 .contentContainerText p {
   padding-top: 18px;
   font-size: 16px;
+}
+.contentContainer a {
+  text-decoration: none;
 }
 .contentContainerButton {
   display: flex;

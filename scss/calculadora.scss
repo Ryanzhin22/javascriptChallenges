@@ -88,3 +88,30 @@
         }
   
 }
+
+// Responsivo
+
+@media (max-width: 550px){
+    .displayCalculadora{
+        width: 400px !important;
+        height: 600px !important;
+        
+            #displayInput{
+                width: 300px !important;
+            }
+        
+            .displayCalculadoraButtons{
+                gap: 15px !important;
+                button{
+                    width: 60px !important;
+                    height: 60px !important;
+                }
+                #resultIgual{
+                    height: 135px !important;
+                }
+                #zero{
+                    width: 135px !important;
+                }
+            }
+    }
+}

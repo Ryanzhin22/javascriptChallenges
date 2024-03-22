@@ -52,14 +52,25 @@ body{
             flex-direction: column;
             height: 50vh;
 
+            #imgLogo{
+                display: none;
+            }
+
             a{
                 margin: 10px;
                 border-bottom: 2px solid white;
+                transition: .3s;
+
+                &:hover{
+                    border-bottom: 2px solid variables.$primaryColor;
+                    transition: .3s;
+                }
+
+                img{
+                    display: none;
+                }
             }
     
-            img{
-                display: none;
-            }
         }
     }
 
@@ -87,6 +98,10 @@ body{
             a{
                 text-decoration: none;
                 list-style-type: none;
+
+                img{
+                    padding-top: 15px;
+                }
 
                 li{
                     font-size: 18px;
@@ -146,6 +161,10 @@ body{
             padding-top: 18px;
             font-size: 16px;
         }
+    }
+
+    a{
+        text-decoration: none;
     }
 
     &Button{

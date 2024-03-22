@@ -56,6 +56,7 @@
   color: #fff;
   font-size: 32px;
   padding: 40px 0;
+  text-align: center;
 }
 .calculadoraIMC .calculadoraDisplayInput {
   display: flex;
@@ -160,6 +161,30 @@
 .calculadoraIMC .ratingsDisplay button:hover {
   background-color: #b6312c;
   transition: 0.3s;
+}
+
+@media (max-width: 550px) {
+  .calculadoraDisplay {
+    width: 400px !important;
+    min-height: 520px !important;
+  }
+  .calculadoraDisplay .calculadoraDisplayButtons {
+    padding-top: 0px !important;
+    flex-direction: column;
+  }
+  .calculadoraDisplay .calculadoraDisplayButtons button {
+    width: 320px !important;
+  }
+  .ratingsDisplay h2 {
+    font-size: 28px !important;
+  }
+  .ratingsDisplay h3 {
+    font-size: 20px !important;
+    text-align: center !important;
+  }
+  .ratingsDisplay .table p {
+    font-size: 12px !important;
+  }
 }
 
 /*# sourceMappingURL=calculadoraIMC.css.map */

@@ -32,7 +32,7 @@
             color: #fff;
             font-size: 32px;
             padding: 40px 0;
-
+            text-align: center;
         }
 
         &Input{
@@ -156,4 +156,37 @@
             }
         }
     }
+}
+
+@media (max-width: 550px){
+    .calculadoraDisplay{
+        width: 400px !important;
+        min-height: 520px !important;
+
+        .calculadoraDisplayButtons{
+            padding-top: 0px !important;
+            flex-direction: column;
+            
+            button{
+                width: 320px !important;
+            }
+        }
+    }
+
+    .ratingsDisplay{
+        h2{
+            font-size: 28px !important;
+        }
+        h3{
+            font-size: 20px !important;
+            text-align: center !important;
+        }
+
+        .table{
+            p{
+                font-size: 12px !important;
+            }
+        }
+    }
+
 }

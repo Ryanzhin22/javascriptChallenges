@@ -12,10 +12,10 @@ class Header extends HTMLElement {
                 <a href="#calc"><li>Calculadora</li></a>
                 <a href="#timer"><li>Cronômetro</li></a>
                 <a href="#todo"><li>To Do List</li></a>
-                <img src="imgs/logo.png" alt="logo">
-                <a href="#imc"><li>Calculadora IMC</li></a>
+                <a id="imgLogo" href="#"><img src="imgs/logo.png" alt="logo"></a>
+                <a href="#imc"><li>IMC</li></a>
                 <a href="#memory"><li>Jogo da Memória</li></a>
-                <a href="#digit"><li>Teste de Digitação</li></a>
+                <a href="#digit"><li>Digitação</li></a>
             </ul>
             <div class="menu" id="menu">
                 <i class="fa-solid fa-bars fa-2x"></i>
@@ -33,14 +33,18 @@ customElements.define('header-component', Header);
 
 const menu = document.getElementById('menu');
 const header = document.getElementsByClassName('header')[0];
+const hrefAll = [...document.querySelectorAll("[href*='#']")]
 
-console.log(menu);
+hrefAll.forEach((elm)=>{
+    elm.addEventListener("click",()=>{
+        header.classList.remove("active")
+    })
+})
 
 menu.addEventListener('click', () => {
     header.classList.toggle('active');
 });
 
-console.log(window.innerWidth);
 
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 950) {

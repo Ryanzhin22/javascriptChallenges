@@ -47,6 +47,7 @@
             font-size: 18px;
             font-weight: 500;
             padding: 10px 30px;
+            user-select: none;
         }
 
         textarea{
@@ -87,6 +88,27 @@
             div{
                 padding: 10px 0; 
                 border-bottom: 1px solid black;
+            }
+        }
+    }
+}
+
+@media (max-width: 460px){
+    .digitTestDisplay{
+        h2{
+            font-size: 24px !important;
+        }
+        p{
+            font-size: 14px !important;
+        }
+        .digitTestText{
+            font-size: 15px !important;
+        }
+
+        .buttons{
+            button{
+                font-size: 12px !important;
+                padding: 10px 15px;
             }
         }
     }

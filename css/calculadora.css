@@ -106,4 +106,27 @@
   color: black !important;
 }
 
+@media (max-width: 550px) {
+  .displayCalculadora {
+    width: 400px !important;
+    height: 600px !important;
+  }
+  .displayCalculadora #displayInput {
+    width: 300px !important;
+  }
+  .displayCalculadora .displayCalculadoraButtons {
+    gap: 15px !important;
+  }
+  .displayCalculadora .displayCalculadoraButtons button {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .displayCalculadora .displayCalculadoraButtons #resultIgual {
+    height: 135px !important;
+  }
+  .displayCalculadora .displayCalculadoraButtons #zero {
+    width: 135px !important;
+  }
+}
+
 /*# sourceMappingURL=calculadora.css.map */
