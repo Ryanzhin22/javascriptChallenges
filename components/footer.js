@@ -12,7 +12,7 @@ head.appendChild(linkIcon);
 const linkCSS = document.createElement('link');
 linkCSS.rel = 'stylesheet';
 linkCSS.type = 'text/css';
-linkCSS.href = '../css/footer.css';
+linkCSS.href = '../components/footer.css';
 
 head.appendChild(linkCSS);
 console.log(head, linkIcon, linkCSS)
