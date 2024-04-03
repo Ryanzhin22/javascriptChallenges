@@ -15,6 +15,7 @@ linkCSS.type = 'text/css';
 linkCSS.href = '../css/footer.css';
 
 head.appendChild(linkCSS);
+console.log(head, linkIcon, linkCSS)
 
 class Footer extends HTMLElement {
     constructor() {
