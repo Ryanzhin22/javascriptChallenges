@@ -16,3 +16,4 @@ Nesse projeto decidi explorar um pouco mais algumas ferramentas que não conheci
 * Canva
 
 ## Acesse o Deploy:
+https://ryanzhin22.github.io/javascriptChallenges
